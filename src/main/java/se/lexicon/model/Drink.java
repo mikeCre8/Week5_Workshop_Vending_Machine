@@ -5,14 +5,14 @@ public class Drink implements Product {
     // Fields
     private final int id;
     private String drinkName;
-    private final boolean temperature;
+    private final boolean isCold;
     private double price;
     
     // Constructors
-    public Drink(int id, String drinkName, boolean temperature, double price) {
+    public Drink(int id, String drinkName, boolean isCold, double price) {
         this.id = id;
         this.drinkName = drinkName;
-        this.temperature = temperature;
+        this.isCold = isCold;
         this.price = price;
     }
     
@@ -25,7 +25,7 @@ public class Drink implements Product {
     @Override
     public String use() {
         String description = "You hold the " + drinkName + ". It feels ";
-        description += temperature ? "...WARM, urgh!!!" : "cold... Mmmm, nice!";
+        description += isCold ? "cold... Mmmm, nice!" : "...WARM, urgh!!!";
         return description;
     }
     
@@ -53,7 +53,7 @@ public class Drink implements Product {
         this.price = price;
     }
     
-    public boolean isTemperature() {
-        return temperature;
+    public boolean isCold() {
+        return isCold;
     }
 }

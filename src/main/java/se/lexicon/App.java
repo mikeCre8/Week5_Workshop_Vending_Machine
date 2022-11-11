@@ -12,8 +12,8 @@ public class App {
     public static void main(String[] args) {
         
         Product[] products = {
-                new Drink(1, "Pepsi MAX", false, 15),
-                new Drink(2, "Fanta", true, 5),
+                new Drink(1, "Pepsi MAX", true, 15),
+                new Drink(2, "Fanta", false, 5),
                 new Fruit(3, "Apple", "Green", 10),
                 new Fruit(4, "Banana", "Yellow with brown spots", 10),
                 new Snacks(5, "10-pack of Mars", 100),
